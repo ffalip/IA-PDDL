@@ -9,6 +9,8 @@
     
     (:init
         (preparador est1 ex1)
+        (preparador est2 ex1)
+        (preparador est3 ex1)
         (preparador est2 ex2)
         (preparador est3 ex3)
         (preparador est4 ex4)
@@ -18,7 +20,7 @@
         (noprep est4)
 
         (dia_abans d0 d1)
-        
+
         (dia_abans d1 d2)
 
         (dia_abans d1 d3)

@@ -44,15 +44,8 @@
                     )
                     (or 
                         (noprep ?ex)
-                        (and
-                            (forall (?ex2 - exercici)
-                                (and
-                                    (preparador ?ex2 ?ex)
-                                    (exists (?nivell - nivell)
-                                        (fet ?dia ?ex2  ?nivell)
-                                    )
-                                )   
-                            )
+                        (forall (?ex2 - exercici)
+                            (or(not (preparador ?ex2 ?ex)) (exists (?nivell - nivell) (fet ?dia ?ex2 ?nivell)))
                         )
                     )
                 )
