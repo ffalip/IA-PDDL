@@ -9,8 +9,7 @@
     
     (:init
         (preparador est1 ex1)
-        (preparador est2 ex1)
-        (preparador est3 ex1)
+        (precursor ex2 ex1)
         (preparador est2 ex2)
         (preparador est3 ex3)
         (preparador est4 ex4)
@@ -18,6 +17,14 @@
         (noprep est2)
         (noprep est3)
         (noprep est4)
+        (noprec ex2)
+        (noprec ex3)
+        (noprec ex4)
+        (noprec est1)
+        (noprec est2)
+        (noprec est3)
+        (noprec est4)
+
 
         (dia_abans d0 d1)
 
@@ -155,9 +162,13 @@
     )
     
     (:goal
-        (and(nivell_max ex1 n3)
-        (nivell_max ex2 n5)
-        (nivell_max ex3 n2)
-        (nivell_max ex4 n8))
+        (and(nivell_max ex1 n10)
+        (nivell_max ex2 n4)
+        (nivell_max ex3 n8)
+        (nivell_max ex4 n3)
+        (nivell_max est1 n1)
+        (nivell_max est2 n1)
+        (nivell_max est3 n1)
+        (nivell_max est4 n1))
     )
 )

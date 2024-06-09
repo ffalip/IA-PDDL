@@ -1,6 +1,6 @@
 ;Header and description
 
-(define (domain domainP1)
+(define (domain domainP2)
 
 ;remove requirements that are not needed
 (:requirements :strips :typing :equality :adl)
@@ -19,6 +19,7 @@
     (preparador ?ex2 - exercici ?ex - exercici)       ;exercici ex2 prepara exercici ex
     (noprep ?ex - exercici)                ;exercici ex no requereix preparacio
     (dia_abans ?dia2 ?dia) ;dia2 va abans que dia 
+    (prep_fet ?dia ?ex)
 )   
 
 ;n0 <- n1 <- n2 <- n3 <- n4 <- n5 <- n6 <- n7 <- n8 <- n9 <- n10
@@ -45,19 +46,21 @@
 
                 )
             )
-            (exists (?ex2 - exercici)
-                (or 
-                    (noprep ?ex)
-                    (and
-                        (preparador ?ex2 ?ex)
-                        (exists (?nivell - nivell)
-                            (fet ?dia ?ex2  ?nivell)
+            (or
+                (noprep ?ex)
+                (forall (?ex2 - exercici)
+                    (or
+                        (not (preparador ?ex2 ?ex))
+                        (and
+                            (preparador ?ex2 ?ex)
+                            (prep_fet ?dia ?ex2) 
                         )
                     )
                 )
             )
+            
         )
-    :effect (and(fet ?dia ?ex ?n) (nivell_max ?ex ?n))
+    :effect (and(fet ?dia ?ex ?n) (nivell_max ?ex ?n)(prep_fet ?dia ?ex))
 
 
 )
