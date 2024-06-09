@@ -1,5 +1,5 @@
 (define (problem problemBasic)
-    (:domain domainP)
+    (:domain domainP2)
     
     (:objects
         ex1 ex2 ex3 ex4 est1 est2 est3 est4 - exercici
