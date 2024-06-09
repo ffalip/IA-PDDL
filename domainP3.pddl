@@ -6,7 +6,7 @@
 (:requirements :strips :typing :equality :adl)
 
 (:types ;todo: enumerate types and their hierarchy here
-    dia nivell exercici quantitat
+    dia nivell exercici
 )
 
 ; un-comment following line if constants are needed
@@ -23,8 +23,6 @@
     (precursor ?ex2 - exercici ?ex - exercici)
     (ultim_ex_fet_dia ?dia - dia ?ex - exercici)
     (noprec ?ex - exercici)
-    (quant_ex_fets ?dia - dia ?quant - quantitat)
-    (quant_seg ?q1 - quantitat ?q2 - quantitat) ;q1 < q2
 )   
 
 ;n0 <- n1 <- n2 <- n3 <- n4 <- n5 <- n6 <- n7 <- n8 <- n9 <- n10
@@ -37,7 +35,6 @@
 (:action entrenar_exercici
     :parameters (?dia - dia ?ex - exercici ?n - nivell)
     :precondition (and 
-            (not (quant_ex_fets ?dia q6))
             (not (fet ?dia ?ex ?n))
             (exists (?n_ant - nivell ?dia2 - dia)
                 (and
@@ -76,7 +73,6 @@
             )
             
         )
-
     :effect (and
                 (fet ?dia ?ex ?n) 
                 (nivell_max ?ex ?n)
@@ -86,14 +82,6 @@
                     (not (ultim_ex_fet_dia ?dia ?ex_prec)))
                 )
                 (ultim_ex_fet_dia ?dia ?ex)
-                (forall (?q1 - quantitat ?q2 - quantitat)
-                    (when(and (quant_ex_fets ?dia ?q1) (quant_seg ?q1 ?q2))
-                        (and
-                            (not (quant_ex_fets ?dia ?q1))
-                            (quant_ex_fets ?dia ?q2)
-                        )
-                    )
-                )
             )
 
 

@@ -5,6 +5,7 @@
         ex1 ex2 ex3 ex4 est1 est2 est3 est4 - exercici
         n0 n1 n2 n3 n4 n5 n6 n7 n8 n9 n10 - nivell
         d0 d1 d2 d3 d4 d5 d6 d7 d8 d9 d10 d11 d12 d13 d14 d15 - dia
+        q0 q1 q2 q3 q4 q5 q6 - quantitat
     )
     
     (:init
@@ -158,6 +159,28 @@
         (nivell_ant n8 n9)
         (nivell_ant n9 n10)
 
+        (quant_seg q0 q1)
+        (quant_seg q1 q2)
+        (quant_seg q2 q3)
+        (quant_seg q3 q4)
+        (quant_seg q4 q5)
+        (quant_seg q5 q6)
+
+        (quant_ex_fets d1 q0)
+        (quant_ex_fets d2 q0)
+        (quant_ex_fets d3 q0)
+        (quant_ex_fets d4 q0)
+        (quant_ex_fets d5 q0)
+        (quant_ex_fets d6 q0)
+        (quant_ex_fets d7 q0)
+        (quant_ex_fets d8 q0)
+        (quant_ex_fets d9 q0)
+        (quant_ex_fets d10 q0)
+        (quant_ex_fets d11 q0)
+        (quant_ex_fets d12 q0)
+        (quant_ex_fets d13 q0)
+        (quant_ex_fets d14 q0)
+        (quant_ex_fets d15 q0)
 
     )
     
