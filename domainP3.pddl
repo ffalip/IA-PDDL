@@ -1,6 +1,6 @@
 ;Header and description
 
-(define (domain domainP)
+(define (domain domainP3)
 
 ;remove requirements that are not needed
 (:requirements :strips :typing :equality :adl)

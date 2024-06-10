@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream:joc539867.pddl
 (define (problem jocdeproves)
 	(:domain domainP1)
 	(:objects
@@ -28,6 +29,46 @@
 		(noprep ex13)
 		(preparador ex3 ex14)
 		(preparador ex4 ex14)
+=======
+(define (problem joc866767)
+	(:domain domainP3)
+	(:objects
+		n0 n1 n2 n3 n4 n5 n6 n7 n8 n9 n10 - nivell
+		dia0 dia1 dia2 dia3 dia4 dia5 dia6 dia7 dia8 dia9 dia10 dia11 dia12 dia13 dia14 dia15 - dia
+		ex0 ex1 ex2 ex3 ex4 ex5 ex6 ex7 ex8 ex9 - exercici
+
+	)
+	(:init
+		(preparador ex0 ex1)
+		(preparador ex2 ex1)
+		(preparador ex1 ex9)
+		(preparador ex3 ex4)
+		(preparador ex6 ex4)
+		(preparador ex7 ex4)
+
+		(noprep ex0)
+		(noprep ex2)
+		(noprep ex3)
+		(noprep ex5)
+		(noprep ex6)
+		(noprep ex7)
+		(noprep ex8)
+
+		(precursor ex0 ex5)
+
+		(noprec ex0)
+	    (noprec ex1)
+		(noprec ex2)
+		(noprec ex3)
+		(noprec ex4)
+		(noprec ex7)
+		(noprec ex6)
+		(noprec ex8)
+		(noprec ex9)
+
+		
+
+>>>>>>> Stashed changes:joc866767.pddl
 		(dia_abans dia0 dia1)
 		(dia_abans dia0 dia2)
 		(dia_abans dia1 dia2)
@@ -170,6 +211,7 @@
 		(nivell_max ex7 n0)
 		(nivell_max ex8 n0)
 		(nivell_max ex9 n0)
+<<<<<<< Updated upstream:joc539867.pddl
 		(nivell_max ex10 n0)
 		(nivell_max ex11 n0)
 		(nivell_max ex12 n0)
@@ -193,6 +235,22 @@
 			(nivell_max ex12 n3)
 			(nivell_max ex13 n8)
 			(nivell_max ex14 n7)
+=======
+
+	)
+	(:goal
+		(and 
+			(nivell_max ex0 n9)
+			(nivell_max ex1 n5)
+			(nivell_max ex2 n1)
+			(nivell_max ex3 n3)
+			(nivell_max ex4 n6)
+			(nivell_max ex5 n7)
+			(nivell_max ex6 n4)
+			(nivell_max ex7 n5)
+			(nivell_max ex8 n2)
+			(nivell_max ex9 n4)
+>>>>>>> Stashed changes:joc866767.pddl
 		)
 	)
 )
